@@ -2,16 +2,22 @@
   "name": "promised-kit",
   "version": "0.0.2",
   "description": "A small kit of commonly used promises",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "npx mocha test.js",
     "build": "tsc",
     "build:dev": "tsc --watch",
     "prerelease": "npm run build && npm run test",
     "release": "npm version patch",
-    "postversion": "git add package.json && git add package-lock.json && git commit",
-    "postrelease": "echo 'Create a github release'"
+    "postversion": "npm run github-release",
+    "github-release": "gh release create %npm_package_version%"
   },
+  "files": [
+    "ReadMe.md",
+    "LICENSE",
+    "/dist",
+    "/GateKeeper"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
