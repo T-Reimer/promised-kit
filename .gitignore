@@ -1,0 +1,5 @@
+# ignore compiled files in git
+dist
+
+#ignore dependencies
+node_modules
