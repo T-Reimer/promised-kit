@@ -1,15 +1,16 @@
 {
   "name": "promised-kit",
   "version": "0.0.1",
-  "description": "",
+  "description": "A small kit of commonly used promises",
   "main": "index.js",
   "scripts": {
     "test": "npx mocha test.js",
     "build": "tsc",
     "build:dev": "tsc --watch",
-    "preupdate": "npm run build && npm run test",
+    "prerelease": "npm run build && npm run test",
+    "release": "npm version patch",
     "postversion": "git add package.json && git add package-lock.json && git commit",
-    "update": "npm version minor"
+    "postrelease": "echo 'Create a github release'"
   },
   "keywords": [],
   "author": "",
