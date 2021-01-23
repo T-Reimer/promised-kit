@@ -9,7 +9,7 @@
     "build:dev": "tsc --watch",
     "prerelease": "npm run build && npm run test",
     "release": "npm version patch",
-    "postversion": "npm run github-release",
+    "postversion": "git push && npm run github-release",
     "github-release": "gh release create %npm_package_version%"
   },
   "files": [
