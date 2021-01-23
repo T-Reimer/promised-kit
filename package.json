@@ -19,8 +19,8 @@
     "/GateKeeper"
   ],
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Trevor Reimer",
+  "license": "MIT",
   "devDependencies": {
     "@types/deep-equal": "^1.0.1",
     "chai": "^4.2.0",
